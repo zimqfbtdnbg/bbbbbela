@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Bela AI 5.0",
+  "description": "The Ultimate AI Super App. Bela AI 5.0 integrates advanced business analytics, educational tools, developer utilities, and creative generation into a single, premium neo-minimalist interface.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

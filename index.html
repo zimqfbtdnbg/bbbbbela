@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bela AI 5.0 Ultimate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#5E72E4', // Deep Blue Accent
+              'primary-dark': '#485ABF',
+              'primary-light': '#8294FF',
+              text: '#333333', // Dark Gray
+              'text-light': '#8898AA', // Neutral Gray
+              bg: '#F5F5F5', // Light Gray Background
+              'card-bg': '#FFFFFF', // White
+              'border-color': '#E9ECEF', // Soft Separator
+              success: '#2DCE89', 
+              warning: '#FB6340',
+              danger: '#F5365C',
+              gold: '#FFD700',
+              purple: '#8965e0',
+              info: '#11cdef',
+            },
+            fontFamily: {
+              sans: ['Roboto', 'sans-serif'],
+            },
+            boxShadow: {
+              'neo': '0 4px 20px rgba(0, 0, 0, 0.05)',
+              'neo-hover': '0 10px 25px rgba(0, 0, 0, 0.08)',
+              'neo-inner': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+              'float': '0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07)',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              coinBounce: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-5px)' },
+              }
+            },
+            animation: {
+              fadeIn: 'fadeIn 0.4s ease-out forwards',
+              coinBounce: 'coinBounce 2s infinite ease-in-out',
+            }
+          }
+        }
+      }
+    </script>
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1"
+      }
+    }
+    </script>
+    <style>
+      body {
+        background-color: #F5F5F5;
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e0; 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #5E72E4; 
+      }
+    </style>
+</head>
+<body class="bg-bg text-text antialiased min-h-screen selection:bg-primary selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+</body>
+</html>
